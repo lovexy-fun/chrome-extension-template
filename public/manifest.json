@@ -1,0 +1,50 @@
+{
+  "name": "chrome-extension-template",
+  "description": "__MSG_manifestHello__",
+  "version": "0.0.1",
+  "manifest_version": 3,
+  "homepage_url": "https://github.com/lovexy-fun/chrome-extension-template#readme",
+  "default_locale": "en",
+  "permissions": [],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "images/icons/icon-16.png",
+      "24": "images/icons/icon-24.png",
+      "32": "images/icons/icon-32.png",
+      "48": "images/icons/icon-48.png",
+      "64": "images/icons/icon-64.png",
+      "96": "images/icons/icon-96.png",
+      "128": "images/icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "js/background.js"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "<all_urls>"
+      ],
+      "css": [
+        "css/content.css"
+      ],
+      "js": [
+        "js/content.js"
+      ]
+    }
+  ],
+  "icons": {
+    "16": "images/icons/icon-16.png",
+    "24": "images/icons/icon-24.png",
+    "32": "images/icons/icon-32.png",
+    "48": "images/icons/icon-48.png",
+    "64": "images/icons/icon-64.png",
+    "96": "images/icons/icon-96.png",
+    "128": "images/icons/icon-128.png"
+  }
+}
